@@ -1,0 +1,22 @@
+.news {
+	background-color: #777;
+}
+
+.twitter {
+	background-color: #00acee;
+}
+
+.banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 10vw;
+}
+
+/* .favouriteIcon__unselected {
+	background-color: #fafcff;
+}
+
+.favouriteIcon__seleced {
+	background-color: #edf2f7;
+} */

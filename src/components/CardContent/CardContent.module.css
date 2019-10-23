@@ -1,0 +1,37 @@
+h1 {
+	font-size: 1rem;
+	margin: auto;
+	padding: 0;
+}
+
+h2 {
+	font-size: 0.75rem;
+	margin: auto;
+	padding: 0;
+}
+
+.cardContentContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: flex-start;
+	height: 10rem;
+	background-color: #edf2f7;
+	width: 70vw;
+	margin: auto;
+	padding: 0;
+}
+
+.cardStory {
+	font-size: 0.75rem;
+	font-style: italic;
+	margin: auto;
+	padding: 0;
+}
+
+.cardDate {
+	font-size: 0.5rem;
+	color: #8c9aad;
+	margin: auto;
+	padding: 0;
+}
