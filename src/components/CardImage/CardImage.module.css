@@ -1,0 +1,16 @@
+.imageContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 10rem;
+	background-color: #edf2f7;
+	width: 21.3vw;
+}
+
+.cardImage {
+	object-fit: cover;
+	height: 4rem;
+	width: 4rem;
+	margin: 0.5rem;
+	border-radius: 50%;
+}
