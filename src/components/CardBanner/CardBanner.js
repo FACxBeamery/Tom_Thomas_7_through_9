@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./CardBanner.module.css";
-const CardBanner = ({ type }) => {
+const CardBanner = ({ mediaType, cardSourceURL }) => {
 	return (
 		<div
 			className={
 				styles.banner +
 				" " +
-				(type === "twitter" ? styles.twitter : styles.news)
+				(mediaType === "tweet" ? styles.twitter : styles.news)
 			}
 		></div>
 	);
