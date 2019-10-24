@@ -242,7 +242,7 @@ const mockTweet = JSON.parse(
 	})
 );
 
-const Content = () => {
+const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
 	return (
 		<>
 			<Card cardData={mockNews} mediaType="news" />
