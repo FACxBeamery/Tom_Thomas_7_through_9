@@ -1,0 +1,55 @@
+.headerContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100vw;
+	height: 4rem;
+	background-color: #3d4e66;
+}
+
+.logo {
+	width: 75vw;
+}
+
+.burgerContainer {
+	display: inline-block;
+	cursor: pointer;
+	padding: 1rem;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #fafcff;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change1 {
+	transform: rotate(-45deg) translate(-9px, 7px);
+	width: 35px;
+	height: 5px;
+	background-color: #fafcff;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+.change2 {
+	opacity: 0;
+	width: 35px;
+	height: 5px;
+	background-color: #fafcff;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change3 {
+	transform: rotate(45deg) translate(-9px, -7px);
+	width: 35px;
+	height: 5px;
+	background-color: #fafcff;
+	margin: 6px 0;
+	transition: 0.4s;
+}
