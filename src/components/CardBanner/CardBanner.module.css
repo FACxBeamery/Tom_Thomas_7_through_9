@@ -13,10 +13,7 @@
 	width: 2rem;
 }
 
-/* .favouriteIcon__unselected {
-	background-color: #fafcff;
+.icon {
+	width: 1.25rem;
+	padding: 0.25rem;
 }
-
-.favouriteIcon__seleced {
-	background-color: #edf2f7;
-} */
