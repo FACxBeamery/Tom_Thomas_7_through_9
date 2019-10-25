@@ -243,12 +243,19 @@ const mockTweet = JSON.parse(
 );
 
 const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
-	return (
-		<>
-			<Card cardData={mockNews} mediaType="news" />
-			<Card cardData={mockTweet} mediaType="tweet" />
-		</>
-	);
+	if (contentChoice === "most-recent") {
+		return (
+			<>
+				<Card cardData={mockNews} mediaType="news" />
+				<Card cardData={mockTweet} mediaType="tweet" />
+			</>
+		);
+	} else {
+		return (
+			// display favourites
+			null
+		);
+	}
 };
 
 export default Content;

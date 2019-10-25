@@ -16,8 +16,8 @@ const CardContent = ({
 }) => {
 	return (
 		<div className={styles.cardContentContainer}>
-			<h1>{truncateString(cardTitle, 50)}</h1>
-			<h2>{truncateString(cardHeading, 50)}</h2>
+			<h2>{truncateString(cardTitle, 50)}</h2>
+			<h3>{truncateString(cardHeading, 50)}</h3>
 			<p className={styles.cardStory}>
 				{truncateString(cardMainText, 140)}
 			</p>
