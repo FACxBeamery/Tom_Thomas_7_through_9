@@ -1,3 +1,5 @@
+# Please view this on a mobile screen size! We're still working on the design for larger screens. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
