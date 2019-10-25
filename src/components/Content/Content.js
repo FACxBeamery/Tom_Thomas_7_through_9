@@ -17,7 +17,9 @@ const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
 	const allMedia = [...mockNews.articles, ...mockTweet.statuses];
 
 	allMedia.sort((a, b) => {
-		return b.dateStandard - a.dateStandard;
+		const dateA = new Date(a.dateStandard);
+		const dateB = new Date(b.dateStandard);
+		return dateB - dateA;
 	});
 
 	const test = allMedia.map((element) => {
