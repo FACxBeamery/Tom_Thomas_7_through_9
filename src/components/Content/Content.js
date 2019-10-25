@@ -13,8 +13,8 @@ const mockNews = {
 		"The bitcoin price has plunged by nearly 10% on Wednesday to fall near a 5-month low. After flirting with a move to the upside above $8,000, the leading cryptocurrency dropped sharply below to just under $7,500. Other major-cap cryptocurrencies also followed B…",
 	url:
 		"https://www.ccn.com/bitcoin-price-plunges-500-5-month-low-below-7500/",
-	urlToImage:
-		"https://www.ccn.com/wp-content/uploads/2019/10/Bitcoin-price-red-chart.jpg",
+	urlToImage: "",
+	// "https://www.ccn.com/wp-content/uploads/2019/10/Bitcoin-price-red-chart.jpg",
 	publishedAt: "2019-10-23T13:42:51Z",
 	content:
 		"The bitcoin price has plunged by nearly 10%  on Wednesday to fall near a 5-month low.\r\nAfter flirting with a move to the upside above $8,000, the leading cryptocurrency dropped sharply below to just under $7,500.\r\nBitcoin price chart | Source: TradingView\r\nOt… [+581 chars]"

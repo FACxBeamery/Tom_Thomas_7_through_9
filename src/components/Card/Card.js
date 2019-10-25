@@ -5,7 +5,11 @@ import CardBanner from "../CardBanner/CardBanner.js";
 import styles from "./Card.module.css";
 
 const getHigherResTwitterImage = (imageURL) => {
-	return imageURL.replace("_normal", "");
+	if (imageURL) {
+		return imageURL.replace("_normal", "");
+	} else {
+		return null;
+	}
 };
 
 const Card = ({ cardData, mediaType }) => {
