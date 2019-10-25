@@ -25,7 +25,9 @@ const CardContent = ({
 			<h2>{truncateString(cardHeading, 50)}</h2>
 
 			<p className={styles.cardStory}>
-				{truncateString(cardMainText, 140)}
+				{cardMainText
+					? truncateString(cardMainText, 140)
+					: "(No story preview available.)"}
 			</p>
 
 			<p className={styles.cardDate}>{cardPublicationDate}</p>
