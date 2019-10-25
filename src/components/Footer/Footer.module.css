@@ -1,0 +1,17 @@
+.footerContainer {
+	display: flex;
+	align-items: center;
+	background-color: #334256;
+	height: 2rem;
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+	margin: 0;
+}
+
+.footerText {
+	font-style: italic;
+	color: #fafcff;
+	margin: 0 auto;
+	padding: 0;
+}

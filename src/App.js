@@ -1,6 +1,7 @@
 import React from "react";
 import Content from "./components/Content/Content";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 				tweetsSelected={tweetsSelected}
 				newsSelected={newsSelected}
 			/>
+			<Footer />
 		</div>
 	);
 }
