@@ -246,8 +246,8 @@ const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
 	if (contentChoice === "most-recent") {
 		return (
 			<>
-				<Card cardData={mockNews} mediaType="news" />
-				<Card cardData={mockTweet} mediaType="tweet" />
+				<Card cardData={mockNews} mediaType="news" tabIndex="0" />
+				<Card cardData={mockTweet} mediaType="tweet" tabIndex="1" />
 			</>
 		);
 	} else {

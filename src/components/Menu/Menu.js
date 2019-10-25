@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button/Button";
 import styles from "./Menu.module.css";
 const Menu = ({
 	contentChoice,
@@ -11,52 +12,32 @@ const Menu = ({
 	return (
 		<div className={styles.menuContainer}>
 			<div className={styles.tabContainer}>
-				<button
-					className={
-						contentChoice === "most-recent"
-							? styles.menuButton + " " + styles.highlightedButton
-							: styles.menuButton
-					}
+				<Button
 					onClick={() => setContentChoice("most-recent")}
-				>
-					Most Recent
-				</button>
-				<button
-					className={
-						contentChoice === "favourites"
-							? styles.menuButton + " " + styles.highlightedButton
-							: styles.menuButton
-					}
+					highlighted={contentChoice === "most-recent"}
+					buttonText="Most Recent"
+				/>
+				<Button
 					onClick={() => setContentChoice("favourites")}
-				>
-					Favourites
-				</button>
+					highlighted={contentChoice === "favourites"}
+					buttonText="Favourites"
+				/>
 			</div>
 			<div className={styles.filterContainer}>
-				<button
-					className={
-						tweetsSelected === true
-							? styles.menuButton + " " + styles.highlightedButton
-							: styles.menuButton
-					}
+				<Button
 					onClick={() =>
 						setTweetsSelected((tweetsSelected) => !tweetsSelected)
 					}
-				>
-					Tweets
-				</button>
-				<button
-					className={
-						newsSelected === true
-							? styles.menuButton + " " + styles.highlightedButton
-							: styles.menuButton
-					}
+					highlighted={tweetsSelected === true}
+					buttonText="Tweets"
+				/>
+				<Button
 					onClick={() =>
 						setNewsSelected((newsSelected) => !newsSelected)
 					}
-				>
-					News Articles
-				</button>
+					highlighted={newsSelected === true}
+					buttonText="News"
+				/>
 			</div>
 		</div>
 	);
