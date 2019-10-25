@@ -2,10 +2,14 @@ import React from "react";
 import styles from "./CardContent.module.css";
 
 const truncateString = (stringToTruncate, chosenLength) => {
-	if (stringToTruncate.length > chosenLength) {
-		return `${stringToTruncate.substring(0, chosenLength)}...`;
+	if (stringToTruncate) {
+		if (stringToTruncate.length > chosenLength) {
+			return `${stringToTruncate.substring(0, chosenLength)}...`;
+		}
+		return stringToTruncate;
 	}
-	return stringToTruncate;
+
+	return null;
 };
 
 const CardContent = ({
@@ -23,7 +27,7 @@ const CardContent = ({
 			<p className={styles.cardStory}>
 				{truncateString(cardMainText, 140)}
 			</p>
-			{/* <p className={styles.cardStory}>{cardMainText}</p> */}
+
 			<p className={styles.cardDate}>{cardPublicationDate}</p>
 		</div>
 	);

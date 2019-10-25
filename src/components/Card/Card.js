@@ -22,7 +22,7 @@ const Card = ({ cardData }) => {
 				cardTitle={cardData.user.name}
 				cardHeading={"@" + cardData.user.screen_name}
 				cardMainText={cardData.text}
-				cardPublicationDate={cardData.created_at}
+				cardPublicationDate={cardData.dateStandard}
 			/>
 			<CardBanner
 				mediaType={cardData.mediaType}
@@ -36,7 +36,7 @@ const Card = ({ cardData }) => {
 				cardTitle={cardData.title}
 				cardHeading={cardData.source.name}
 				cardMainText={cardData.description}
-				cardPublicationDate={cardData.publishedAt}
+				cardPublicationDate={cardData.dateStandard}
 			/>
 			<CardBanner
 				mediaType={cardData.mediaType}
