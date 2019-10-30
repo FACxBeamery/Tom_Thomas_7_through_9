@@ -12,8 +12,10 @@ const getHigherResTwitterImage = (imageURL) => {
 	}
 };
 
-const Card = ({ cardData, mediaType }) => {
-	return mediaType === "tweet" ? (
+const Card = ({ cardData }) => {
+	// console.log("card cardData.title: ", cardData.title);
+	console.log("cardData: ", cardData);
+	return cardData.mediaType === "tweet" ? (
 		<article className={styles.cardContainer}>
 			<CardImage
 				imageURL={getHigherResTwitterImage(
@@ -24,11 +26,11 @@ const Card = ({ cardData, mediaType }) => {
 				cardTitle={cardData.user.name}
 				cardHeading={"@" + cardData.user.screen_name}
 				cardMainText={cardData.text}
-				cardPublicationDate={cardData.created_at}
+				cardPublicationDate={cardData.dateStandard}
 			/>
 			<CardBanner
-				mediaType={mediaType}
-				cardSourceURL={cardData.entities.urls[0].expanded_url}
+				mediaType={cardData.mediaType}
+				// cardSourceURL={cardData.entities.urls[0].expanded_url}
 			/>
 		</article>
 	) : (
@@ -38,9 +40,12 @@ const Card = ({ cardData, mediaType }) => {
 				cardTitle={cardData.title}
 				cardHeading={cardData.source.name}
 				cardMainText={cardData.description}
-				cardPublicationDate={cardData.publishedAt}
+				cardPublicationDate={cardData.dateStandard}
 			/>
-			<CardBanner mediaType={mediaType} cardSourceURL={cardData.url} />
+			<CardBanner
+				mediaType={cardData.mediaType}
+				cardSourceURL={cardData.url}
+			/>
 		</article>
 	);
 };
