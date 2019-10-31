@@ -10,6 +10,8 @@
 
 .logo {
 	width: 75vw;
+	max-width: 400px;
+	margin: 0 auto;
 }
 
 .burgerContainer {

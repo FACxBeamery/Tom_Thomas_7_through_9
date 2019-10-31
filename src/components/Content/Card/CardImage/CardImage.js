@@ -1,13 +1,22 @@
 import React from "react";
 import styles from "./CardImage.module.css";
 import imagePath from "./question.svg";
-const CardImage = ({ imageURL }) => {
+import newsIconPath from "./newspaper.svg";
+import twitterIconPath from "./twitter.svg";
+
+const CardImage = ({ imageURL, mediaType }) => {
 	return (
 		<div className={styles.imageContainer} data-testid="cardimage">
 			<img
 				src={imageURL ? imageURL : imagePath}
 				className={styles.cardImage}
 				alt={imageURL ? "related to tweet" : "image not found"}
+				data-testid="newspaper-icon"
+			/>
+			<img
+				src={mediaType === "tweet" ? twitterIconPath : newsIconPath}
+				className={styles.icon}
+				data-testid="twitter-icon"
 			/>
 		</div>
 	);
