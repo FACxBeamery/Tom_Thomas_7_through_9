@@ -3,23 +3,70 @@ import Card from "./Card/Card";
 import mockTweet from "./mockTweet.js";
 import mockNews from "./mockNews.js";
 import styles from "./Content.module.css";
-import client from "./twitterConfig.js";
+// import twitterClient from "./twitterConfig.js";
 
 const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
-	const searchParams = {
-		q: "beamery",
-		count: 10,
-		result_type: "recent",
-		lang: "en"
+	const [newsArticles, setNewsArticles] = React.useState(null);
+
+	// const twitterSearchParams = {
+	// 	q: "beamery",
+	// 	count: 10,
+	// 	result_type: "recent",
+	// 	lang: "en"
+	// };
+
+	// twitterClient.get(
+	// 	"search/tweets",
+	// 	twitterSearchParams,
+	// 	(error, data, response) => {
+	// 		if (!error) {
+	// 			console.log(JSON.parse(response.body));
+	// 		} else {
+	// 			console.error(error);
+	// 		}
+	// 	}
+	// );
+
+	const googleNewsApiKey = process.env.REACT_APP_GOOGLE_NEWS_API_KEY;
+
+	const getGoogleNews = () => {
+		fetch(
+			`https://newsapi.org/v2/everything?q=beamery&language=en&sortBy=publishedAt&apiKey=${googleNewsApiKey}`
+		)
+			.then((response) => {
+				if (response.status !== 200) {
+					throw new Error(
+						"An error occurred when retrieving articles relating to Beamery, using the Google News API."
+					);
+				}
+				return response.json();
+			})
+			.then((response) => response.articles)
+			.then((articles) => {
+				const cleanedNewsArticles = articles.map((elem) => {
+					const cleanedArticle = {};
+					cleanedArticle.imageUrl = elem.urlToImage;
+					cleanedArticle.title = elem.title;
+					cleanedArticle.heading = elem.source.name;
+					cleanedArticle.mainText = elem.description;
+					cleanedArticle.sourceUrl = elem.url;
+					cleanedArticle.mediaType = "news";
+					cleanedArticle.dateStandard = new Date(
+						elem.publishedAt
+					).toUTCString();
+
+					return cleanedArticle;
+				});
+				console.log("before setting state");
+				setNewsArticles(cleanedNewsArticles);
+				console.log("cleanArt: ", cleanedNewsArticles);
+			})
+			.catch((error) => {
+				throw new Error(error.message);
+			});
 	};
 
-	client.get("search/tweets", searchParams, (error, data, response) => {
-		if (!error) {
-			console.log(JSON.parse(response.body));
-		} else {
-			console.error(error);
-		}
-	});
+	// React.useEffect(getGoogleNews(), []);
 
 	mockNews.articles.forEach((elem) => {
 		elem.mediaType = "news";
@@ -60,7 +107,7 @@ const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
 		return <Card cardData={element} />;
 	});
 
-	return [cardsToRender];
+	return <div className={styles.contentContainer}>{[cardsToRender]}</div>;
 };
 
 export default Content;
