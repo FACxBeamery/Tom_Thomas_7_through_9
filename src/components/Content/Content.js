@@ -3,8 +3,24 @@ import Card from "./Card/Card";
 import mockTweet from "./mockTweet.js";
 import mockNews from "./mockNews.js";
 import styles from "./Content.module.css";
+import client from "./twitterConfig.js";
 
 const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
+	const searchParams = {
+		q: "beamery",
+		count: 10,
+		result_type: "recent",
+		lang: "en"
+	};
+
+	client.get("search/tweets", searchParams, (error, data, response) => {
+		if (!error) {
+			console.log(JSON.parse(response.body));
+		} else {
+			console.error(error);
+		}
+	});
+
 	mockNews.articles.forEach((elem) => {
 		elem.mediaType = "news";
 		elem.dateStandard = new Date(elem.publishedAt).toUTCString();
