@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
 import imagePath from "./header.svg";
-import Menu from "../Menu/Menu";
+import Menu from "./Menu/Menu";
 const Header = ({
 	contentChoice,
 	setContentChoice,
@@ -19,7 +19,11 @@ const Header = ({
 		<>
 			<div className={styles.headerContainer}>
 				<img className={styles.logo} src={imagePath} />
-				<div className={styles.burgerContainer} onClick={handleClick}>
+				<div
+					className={styles.burgerContainer}
+					onClick={handleClick}
+					data-testid="burger"
+				>
 					<div
 						className={menuSelected ? styles.change1 : styles.bar1}
 					></div>

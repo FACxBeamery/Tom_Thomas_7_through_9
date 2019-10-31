@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../Card/Card";
+import Card from "./Card/Card";
 import mockTweet from "./mockTweet.js";
 import mockNews from "./mockNews.js";
 import styles from "./Content.module.css";
@@ -23,8 +23,6 @@ const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
 	if (newsSelected) {
 		filteredMedia.push(...mockNews.articles);
 	}
-
-	console.log("filteredMedia: ", filteredMedia);
 
 	if (filteredMedia.length === 0) {
 		return (

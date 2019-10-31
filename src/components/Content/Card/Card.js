@@ -13,8 +13,6 @@ const getHigherResTwitterImage = (imageURL) => {
 };
 
 const Card = ({ cardData }) => {
-	// console.log("card cardData.title: ", cardData.title);
-	console.log("cardData: ", cardData);
 	return cardData.mediaType === "tweet" ? (
 		<article className={styles.cardContainer}>
 			<CardImage
