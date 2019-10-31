@@ -32,7 +32,9 @@ test("Menu working", () => {
 
 	fireEvent.click(TweetsButton); // deselect tweets
 	fireEvent.click(NewsButton); // deselect news
-	getByText("Please select the content you'd like to see");
+	expect(
+		getByText("Please select the content you'd like to see")
+	).toBeDefined();
 
 	fireEvent.click(TweetsButton); // select tweets
 	getAllByText(/^\@/); // to be replaced by a test for the twitter icon

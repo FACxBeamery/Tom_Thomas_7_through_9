@@ -1,6 +1,6 @@
 import Twitter from "twitter";
 
-const client = new Twitter({
+const twitterClient = new Twitter({
 	consumer_key: process.env.REACT_APP_TWITTER_CONSUMER_KEY,
 	consumer_secret: process.env.REACT_APP_TWITTER_CONSUMER_KEY_SECRET,
 	access_token_key: process.env.REACT_APP_TWITTER_ACCESS_TOKEN_KEY,
@@ -10,4 +10,4 @@ const client = new Twitter({
 	}
 });
 
-export default client;
+export default twitterClient;
