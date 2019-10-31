@@ -18,7 +18,11 @@ const Header = ({
 	return (
 		<>
 			<div className={styles.headerContainer}>
-				<img className={styles.logo} src={imagePath} />
+				<img
+					className={styles.logo}
+					src={imagePath}
+					alt="Beamery Social Logo"
+				/>
 				<div
 					className={styles.burgerContainer}
 					onClick={handleClick}

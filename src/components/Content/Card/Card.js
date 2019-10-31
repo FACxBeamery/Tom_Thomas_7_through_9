@@ -19,6 +19,7 @@ const Card = ({ cardData }) => {
 				imageURL={getHigherResTwitterImage(
 					cardData.user.profile_image_url_https
 				)}
+				mediaType="tweet"
 			/>
 			<CardContent
 				cardTitle={cardData.user.name}
@@ -33,7 +34,7 @@ const Card = ({ cardData }) => {
 		</article>
 	) : (
 		<article className={styles.cardContainer}>
-			<CardImage imageURL={cardData.urlToImage} />
+			<CardImage imageURL={cardData.urlToImage} mediaType="news" />
 			<CardContent
 				cardTitle={cardData.title}
 				cardHeading={cardData.source.name}

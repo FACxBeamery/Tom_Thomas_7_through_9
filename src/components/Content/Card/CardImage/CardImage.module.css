@@ -1,7 +1,7 @@
 .imageContainer {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: space-between;
 	height: 10rem;
 	background-color: #edf2f7;
 	width: 21.3vw;
@@ -13,4 +13,9 @@
 	width: 4rem;
 	margin: 0.5rem;
 	border-radius: 50%;
+}
+
+.icon {
+	width: 1.25rem;
+	padding: 0.5rem;
 }
