@@ -4,7 +4,7 @@ const rawTweet = {
         "created_at": "Wed Apr 12 04:53:25 +0000 2017",
         "id": 852021818290352129,
         "id_str": "852021818290352129",
-        "text": "Watch NASA's first 4K broadcast from space on April 26th - Engadget https:\/\/t.co\/EfwAYeJpjF",
+        "text": "Watch NASA's first 4K broadcast from space on April 26th - Engadget https://t.co/EfwAYeJpjF",
         "truncated": false,
         "entities": {
           "hashtags": [
@@ -18,9 +18,9 @@ const rawTweet = {
           ],
           "urls": [
             {
-              "url": "https:\/\/t.co\/EfwAYeJpjF",
-              "expanded_url": "http:\/\/ift.tt\/2orifBN",
-              "display_url": "ift.tt\/2orifBN",
+              "url": "https://t.co/EfwAYeJpjF",
+              "expanded_url": "http://ift.tt/2orifBN",
+              "display_url": "ift.tt/2orifBN",
               "indices": [
                 68,
                 91
@@ -32,7 +32,7 @@ const rawTweet = {
           "iso_language_code": "en",
           "result_type": "recent"
         },
-        "source": "<a href=\"https:\/\/ifttt.com\" rel=\"nofollow\">IFTTT<\/a>",
+        "source": "<a href=\"https://ifttt.com\" rel=\"nofollow\">IFTTT</a>",
         "in_reply_to_status_id": null,
         "in_reply_to_status_id_str": null,
         "in_reply_to_user_id": null,
@@ -69,12 +69,12 @@ const rawTweet = {
           "is_translator": false,
           "is_translation_enabled": false,
           "profile_background_color": "131516",
-          "profile_background_image_url": "http:\/\/pbs.twimg.com\/profile_background_images\/530442443057942528\/jgQgrriz.jpeg",
-          "profile_background_image_url_https": "https:\/\/pbs.twimg.com\/profile_background_images\/530442443057942528\/jgQgrriz.jpeg",
+          "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/530442443057942528/jgQgrriz.jpeg",
+          "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/530442443057942528/jgQgrriz.jpeg",
           "profile_background_tile": true,
-          "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/810537113288482816\/AL7srBp3_normal.jpg",
-          "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/810537113288482816\/AL7srBp3_normal.jpg",
-          "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/622857704\/1415224702",
+          "profile_image_url": "http://pbs.twimg.com/profile_images/810537113288482816/AL7srBp3_normal.jpg",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/810537113288482816/AL7srBp3_normal.jpg",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/622857704/1415224702",
           "profile_link_color": "3B94D9",
           "profile_sidebar_border_color": "000000",
           "profile_sidebar_fill_color": "000000",
@@ -104,7 +104,7 @@ const rawTweet = {
         "created_at": "Wed Apr 12 04:53:08 +0000 2017",
         "id": 8.5202174412671e+17,
         "id_str": "852021744126705664",
-        "text": "RT @TechCrunch: NASA and Amazon will stream from space in 4K for the first time on April 26 https:\/\/t.co\/KWMfvRg1Hs",
+        "text": "RT @TechCrunch: NASA and Amazon will stream from space in 4K for the first time on April 26 https://t.co/KWMfvRg1Hs",
         "truncated": false,
         "entities": {
           "hashtags": [
@@ -127,9 +127,9 @@ const rawTweet = {
           ],
           "urls": [
             {
-              "url": "https:\/\/t.co\/KWMfvRg1Hs",
-              "expanded_url": "http:\/\/tcrn.ch\/2nB1aGU",
-              "display_url": "tcrn.ch\/2nB1aGU",
+              "url": "https://t.co/KWMfvRg1Hs",
+              "expanded_url": "http://tcrn.ch/2nB1aGU",
+              "display_url": "tcrn.ch/2nB1aGU",
               "indices": [
                 92,
                 115
@@ -141,7 +141,7 @@ const rawTweet = {
           "iso_language_code": "en",
           "result_type": "recent"
         },
-        "source": "<a href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\">Twitter for iPhone<\/a>",
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
         "in_reply_to_status_id": null,
         "in_reply_to_status_id_str": null,
         "in_reply_to_user_id": null,
@@ -154,13 +154,13 @@ const rawTweet = {
           "screen_name": "nottora2",
           "location": "Seoul, Korea",
           "description": "",
-          "url": "http:\/\/t.co\/WpOh7jvYit",
+          "url": "http://t.co/WpOh7jvYit",
           "entities": {
             "url": {
               "urls": [
                 {
-                  "url": "http:\/\/t.co\/WpOh7jvYit",
-                  "expanded_url": "http:\/\/sttora2.net",
+                  "url": "http://t.co/WpOh7jvYit",
+                  "expanded_url": "http://sttora2.net",
                   "display_url": "sttora2.net",
                   "indices": [
                     0,
@@ -191,11 +191,11 @@ const rawTweet = {
           "is_translator": false,
           "is_translation_enabled": false,
           "profile_background_color": "1A1B1F",
-          "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme9\/bg.gif",
-          "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme9\/bg.gif",
+          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme9/bg.gif",
+          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme9/bg.gif",
           "profile_background_tile": false,
-          "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/420186574\/0001_normal.jpg",
-          "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/420186574\/0001_normal.jpg",
+          "profile_image_url": "http://pbs.twimg.com/profile_images/420186574/0001_normal.jpg",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/420186574/0001_normal.jpg",
           "profile_link_color": "2FC2EF",
           "profile_sidebar_border_color": "181A1E",
           "profile_sidebar_fill_color": "252429",
@@ -217,7 +217,7 @@ const rawTweet = {
           "created_at": "Wed Apr 12 01:48:02 +0000 2017",
           "id": 8.5197516353722e+17,
           "id_str": "851975163537219585",
-          "text": "NASA and Amazon will stream from space in 4K for the first time on April 26 https:\/\/t.co\/KWMfvRg1Hs",
+          "text": "NASA and Amazon will stream from space in 4K for the first time on April 26 https://t.co/KWMfvRg1Hs",
           "truncated": false,
           "entities": {
             "hashtags": [
@@ -231,9 +231,9 @@ const rawTweet = {
             ],
             "urls": [
               {
-                "url": "https:\/\/t.co\/KWMfvRg1Hs",
-                "expanded_url": "http:\/\/tcrn.ch\/2nB1aGU",
-                "display_url": "tcrn.ch\/2nB1aGU",
+                "url": "https://t.co/KWMfvRg1Hs",
+                "expanded_url": "http://tcrn.ch/2nB1aGU",
+                "display_url": "tcrn.ch/2nB1aGU",
                 "indices": [
                   76,
                   99
@@ -245,7 +245,7 @@ const rawTweet = {
             "iso_language_code": "en",
             "result_type": "recent"
           },
-          "source": "<a href=\"http:\/\/www.socialflow.com\" rel=\"nofollow\">SocialFlow<\/a>",
+          "source": "<a href=\"http://www.socialflow.com\" rel=\"nofollow\">SocialFlow</a>",
           "in_reply_to_status_id": null,
           "in_reply_to_status_id_str": null,
           "in_reply_to_user_id": null,
@@ -258,12 +258,12 @@ const rawTweet = {
             "screen_name": "TechCrunch",
             "location": "San Francisco, CA",
             "description": "Breaking technology news, analysis, and opinions from TechCrunch. The number one guide for all things tech. Got a tip? Let us know tips@techcrunch.com",
-            "url": "https:\/\/t.co\/b5Oyx12qGG",
+            "url": "https://t.co/b5Oyx12qGG",
             "entities": {
               "url": {
                 "urls": [
                   {
-                    "url": "https:\/\/t.co\/b5Oyx12qGG",
+                    "url": "https://t.co/b5Oyx12qGG",
                     "expanded_url": null,
                     "indices": [
                       0,
@@ -294,12 +294,12 @@ const rawTweet = {
             "is_translator": false,
             "is_translation_enabled": true,
             "profile_background_color": "149500",
-            "profile_background_image_url": "http:\/\/pbs.twimg.com\/profile_background_images\/621096023751004161\/BAKy7hCT.png",
-            "profile_background_image_url_https": "https:\/\/pbs.twimg.com\/profile_background_images\/621096023751004161\/BAKy7hCT.png",
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/621096023751004161/BAKy7hCT.png",
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/621096023751004161/BAKy7hCT.png",
             "profile_background_tile": false,
-            "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/615392662233808896\/EtxjSSKk_normal.jpg",
-            "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/615392662233808896\/EtxjSSKk_normal.jpg",
-            "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/816653\/1490894597",
+            "profile_image_url": "http://pbs.twimg.com/profile_images/615392662233808896/EtxjSSKk_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/615392662233808896/EtxjSSKk_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/816653/1490894597",
             "profile_link_color": "097000",
             "profile_sidebar_border_color": "FFFFFF",
             "profile_sidebar_fill_color": "DDFFCC",
@@ -366,7 +366,7 @@ const rawTweet = {
           "iso_language_code": "en",
           "result_type": "recent"
         },
-        "source": "<a href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\">Twitter for Android<\/a>",
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
         "in_reply_to_status_id": null,
         "in_reply_to_status_id_str": null,
         "in_reply_to_user_id": null,
@@ -403,12 +403,12 @@ const rawTweet = {
           "is_translator": false,
           "is_translation_enabled": false,
           "profile_background_color": "89C9FA",
-          "profile_background_image_url": "http:\/\/pbs.twimg.com\/profile_background_images\/618681903441252352\/rjLy48Ga.jpg",
-          "profile_background_image_url_https": "https:\/\/pbs.twimg.com\/profile_background_images\/618681903441252352\/rjLy48Ga.jpg",
+          "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/618681903441252352/rjLy48Ga.jpg",
+          "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/618681903441252352/rjLy48Ga.jpg",
           "profile_background_tile": true,
-          "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/851045496906854400\/z1iIPlRm_normal.jpg",
-          "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/851045496906854400\/z1iIPlRm_normal.jpg",
-          "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/2433542798\/1491546365",
+          "profile_image_url": "http://pbs.twimg.com/profile_images/851045496906854400/z1iIPlRm_normal.jpg",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/851045496906854400/z1iIPlRm_normal.jpg",
+          "profile_banner_url": "https://pbs.twimg.com/profile_banners/2433542798/1491546365",
           "profile_link_color": "9266CC",
           "profile_sidebar_border_color": "5ED4DC",
           "profile_sidebar_fill_color": "95E8EC",
@@ -450,7 +450,7 @@ const rawTweet = {
             "iso_language_code": "en",
             "result_type": "recent"
           },
-          "source": "<a href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\">Twitter for Android<\/a>",
+          "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
           "in_reply_to_status_id": null,
           "in_reply_to_status_id_str": null,
           "in_reply_to_user_id": null,
@@ -463,13 +463,13 @@ const rawTweet = {
             "screen_name": "snowdenka",
             "location": "",
             "description": "JaDine, Harry Potter, JPop, Anime | fangirling. fanworks. random thoughts. kalokohan. whinings about life | IG: jadinex \u2022 YT: JaDinex \u2022 WP: kooridenka",
-            "url": "https:\/\/t.co\/UqnYe2vdrc",
+            "url": "https://t.co/UqnYe2vdrc",
             "entities": {
               "url": {
                 "urls": [
                   {
-                    "url": "https:\/\/t.co\/UqnYe2vdrc",
-                    "expanded_url": "http:\/\/jadinex.livejournal.com",
+                    "url": "https://t.co/UqnYe2vdrc",
+                    "expanded_url": "http://jadinex.livejournal.com",
                     "display_url": "jadinex.livejournal.com",
                     "indices": [
                       0,
@@ -500,12 +500,12 @@ const rawTweet = {
             "is_translator": false,
             "is_translation_enabled": false,
             "profile_background_color": "000000",
-            "profile_background_image_url": "http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
-            "profile_background_image_url_https": "https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
             "profile_background_tile": false,
-            "profile_image_url": "http:\/\/pbs.twimg.com\/profile_images\/845930850210361344\/fgHcvMFy_normal.jpg",
-            "profile_image_url_https": "https:\/\/pbs.twimg.com\/profile_images\/845930850210361344\/fgHcvMFy_normal.jpg",
-            "profile_banner_url": "https:\/\/pbs.twimg.com\/profile_banners\/2330241865\/1491408790",
+            "profile_image_url": "http://pbs.twimg.com/profile_images/845930850210361344/fgHcvMFy_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/845930850210361344/fgHcvMFy_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/2330241865/1491408790",
             "profile_link_color": "DD2E44",
             "profile_sidebar_border_color": "000000",
             "profile_sidebar_fill_color": "000000",
