@@ -57,7 +57,6 @@ const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
 
 					return cleanedArticle;
 				});
-				console.log("before setting state");
 				setNewsArticles(cleanedNewsArticles);
 				console.log("cleanArt: ", cleanedNewsArticles);
 			})
@@ -66,7 +65,10 @@ const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
 			});
 	};
 
-	// React.useEffect(getGoogleNews(), []);
+	// getGoogleNews();
+	React.useEffect(() => {
+		getGoogleNews();
+	}, []);
 
 	mockNews.articles.forEach((elem) => {
 		elem.mediaType = "news";
