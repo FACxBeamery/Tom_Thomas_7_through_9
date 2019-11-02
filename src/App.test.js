@@ -1,13 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "@testing-library/jest-dom/extend-expect";
 import App from "./App";
 
-import {
-	render,
-	fireEvent,
-	cleanup,
-	waitForElement
-} from "@testing-library/react";
+import { render, fireEvent, cleanup } from "@testing-library/react";
 afterEach(cleanup);
 
 it("renders without crashing", () => {
@@ -17,13 +13,9 @@ it("renders without crashing", () => {
 });
 
 test("Menu working", () => {
-	const {
-		getByText,
-		getAllByText,
-		getByTestId,
-		findByText,
-		queryByText
-	} = render(<App />);
+	const { getByText, getByTestId, queryByText, queryAllByTestId } = render(
+		<App />
+	);
 	const burgerMenu = getByTestId("burger");
 	fireEvent.click(burgerMenu); // open menu
 
@@ -34,14 +26,44 @@ test("Menu working", () => {
 	fireEvent.click(NewsButton); // deselect news
 	expect(
 		getByText("Please select the content you'd like to see")
-	).toBeDefined();
+	).toBeVisible();
 
 	fireEvent.click(TweetsButton); // select tweets
-	getAllByText(/^\@/); // to be replaced by a test for the twitter icon
+	expect(queryAllByTestId("twitter-icon")).toBeTruthy() &&
+		expect(queryAllByTestId("news-icon")).toBeFalsy(); // only tweets are visible
 
 	fireEvent.click(TweetsButton); // deselect tweets
 	fireEvent.click(NewsButton); // select news
-	expect(queryByText(/^\@/)).toBeNull();
+	expect(queryAllByTestId("news-icon")).toBeTruthy() &&
+		expect(queryAllByTestId("twitter-icon")).toBeFalsy();
 	fireEvent.click(burgerMenu); // close Menu
-	expect(queryByText("Most Recent")).toBeNull();
+	expect(queryByText("Most Recent")).toBeNull() &&
+		expect(queryByText("Favourites")).toBeNull() &&
+		expect(queryByText("Tweets")).toBeNull() &&
+		expect(queryByText("News")).toBeNull();
+});
+
+test("Favourites funcitonality working", () => {
+	const { getByText, getByTestId, queryAllByTestId } = render(<App />);
+
+	const burgerMenu = getByTestId("burger");
+
+	fireEvent.click(burgerMenu); // open menu
+
+	const mostRecentButton = getByText("Most Recent");
+	const favouritesButton = getByText("Favourites");
+
+	fireEvent.click(favouritesButton); // open Favourites tab
+
+	expect(getByTestId("content-container")).toBeEmpty(); // no media items should appear
+
+	fireEvent.click(mostRecentButton); //back to Most Recent tab
+
+	const firstHeartIcon = queryAllByTestId("heart-icon")[0];
+
+	fireEvent.click(firstHeartIcon); // favourite first media item
+
+	fireEvent.click(favouritesButton); // back to Favourites tab
+
+	expect(getByTestId("content-container")).not.toBeEmpty(); // the favourited item is present
 });

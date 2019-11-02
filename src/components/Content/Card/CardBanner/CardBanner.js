@@ -4,8 +4,8 @@ import linkIconPath from "./link.svg";
 import fullHeartPath from "./full_heart.svg";
 import emptyHeartPath from "./empty_heart.svg";
 
-const CardBanner = ({ mediaType, cardSourceURL }) => {
-	const [favourite, setFavourite] = React.useState(false);
+const CardBanner = ({ mediaType, cardSourceURL, favourite, setFavourite }) => {
+	// const [favourite, setFavourite] = React.useState(false);
 	return (
 		<div
 			className={
@@ -17,8 +17,11 @@ const CardBanner = ({ mediaType, cardSourceURL }) => {
 			<img
 				src={favourite ? fullHeartPath : emptyHeartPath}
 				className={styles.icon}
+				data-testid="heart-icon"
 				alt="a heart icon"
-				onClick={() => setFavourite((favourite) => !favourite)}
+				onClick={() => {
+					setFavourite((favourite) => !favourite);
+				}}
 			/>
 			<a href={cardSourceURL}>
 				<img
