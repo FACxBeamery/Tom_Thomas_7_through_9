@@ -1,12 +1,12 @@
 import React from "react";
-import Card from "./Card/Card";
+import { Card } from "./Card/Card";
 import mockTweet from "./mockTweet.js";
 import mockNews from "./mockNews.js";
 import styles from "./Content.module.css";
 // import twitterClient from "./twitterConfig.js";
 
 const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
-	const [newsArticles, setNewsArticles] = React.useState(null);
+	// const [newsArticles, setNewsArticles] = React.useState(null);
 
 	// const twitterSearchParams = {
 	// 	q: "beamery",
@@ -27,48 +27,47 @@ const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
 	// 	}
 	// );
 
-	const googleNewsApiKey = process.env.REACT_APP_GOOGLE_NEWS_API_KEY;
+	// const googleNewsApiKey = process.env.REACT_APP_GOOGLE_NEWS_API_KEY;
 
-	const getGoogleNews = () => {
-		fetch(
-			`https://newsapi.org/v2/everything?q=beamery&language=en&sortBy=publishedAt&apiKey=${googleNewsApiKey}`
-		)
-			.then((response) => {
-				if (response.status !== 200) {
-					throw new Error(
-						"An error occurred when retrieving articles relating to Beamery, using the Google News API."
-					);
-				}
-				return response.json();
-			})
-			.then((response) => response.articles)
-			.then((articles) => {
-				const cleanedNewsArticles = articles.map((elem) => {
-					const cleanedArticle = {};
-					cleanedArticle.imageUrl = elem.urlToImage;
-					cleanedArticle.title = elem.title;
-					cleanedArticle.heading = elem.source.name;
-					cleanedArticle.mainText = elem.description;
-					cleanedArticle.sourceUrl = elem.url;
-					cleanedArticle.mediaType = "news";
-					cleanedArticle.dateStandard = new Date(
-						elem.publishedAt
-					).toUTCString();
+	// const getGoogleNews = () => {
+	// 	fetch(
+	// 		`https://newsapi.org/v2/everything?q=beamery&language=en&sortBy=publishedAt&apiKey=${googleNewsApiKey}`
+	// 	)
+	// 		.then((response) => {
+	// 			if (response.status !== 200) {
+	// 				throw new Error(
+	// 					"An error occurred when retrieving articles relating to Beamery, using the Google News API."
+	// 				);
+	// 			}
+	// 			return response.json();
+	// 		})
+	// 		.then((response) => response.articles)
+	// 		.then((articles) => {
+	// 			const cleanedNewsArticles = articles.map((elem) => {
+	// 				const cleanedArticle = {};
+	// 				cleanedArticle.imageUrl = elem.urlToImage;
+	// 				cleanedArticle.title = elem.title;
+	// 				cleanedArticle.heading = elem.source.name;
+	// 				cleanedArticle.mainText = elem.description;
+	// 				cleanedArticle.sourceUrl = elem.url;
+	// 				cleanedArticle.mediaType = "news";
+	// 				cleanedArticle.dateStandard = new Date(
+	// 					elem.publishedAt
+	// 				).toUTCString();
 
-					return cleanedArticle;
-				});
-				setNewsArticles(cleanedNewsArticles);
-				console.log("cleanArt: ", cleanedNewsArticles);
-			})
-			.catch((error) => {
-				throw new Error(error.message);
-			});
-	};
+	// 				return cleanedArticle;
+	// 			});
+	// 			setNewsArticles(cleanedNewsArticles);
+	// 			// console.log("cleanArt: ", cleanedNewsArticles);
+	// 		})
+	// 		.catch((error) => {
+	// 			throw new Error(error.message);
+	// 		});
+	// };
 
-	// getGoogleNews();
-	React.useEffect(() => {
-		getGoogleNews();
-	}, []);
+	// React.useEffect(() => {
+	// 	getGoogleNews();
+	// }, []);
 
 	mockNews.articles.forEach((elem) => {
 		elem.mediaType = "news";
@@ -105,11 +104,40 @@ const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
 		return dateB - dateA;
 	});
 
-	const cardsToRender = filteredMedia.map((element) => {
-		return <Card cardData={element} />;
-	});
+	// const cardsToRender = filteredMedia.map((element) => {
+	// 	console.log("inside cardsToRender, logging each card: ", element);
+	// 	return <Card cardData={element} />;
+	// });
 
-	return <div className={styles.contentContainer}>{[cardsToRender]}</div>;
+	const cardsToRender =
+		contentChoice === "most-recent"
+			? filteredMedia.map((element) => {
+					return (
+						<Card
+							key={Date.parse(element.dateStandard)}
+							cardData={element}
+						/>
+					);
+			  })
+			: filteredMedia
+					.filter((element) => element.favourite === true)
+					.map((element) => {
+						return (
+							<Card
+								key={Date.parse(element.dateStandard)}
+								cardData={element}
+							/>
+						);
+					});
+
+	return (
+		<div
+			className={styles.contentContainer}
+			data-testid="content-container"
+		>
+			{[cardsToRender]}
+		</div>
+	);
 };
 
 export default Content;
