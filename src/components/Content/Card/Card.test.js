@@ -2,7 +2,7 @@ import "@testing-library/jest-dom/extend-expect";
 import { getHigherResTwitterImage } from "./Card.js";
 
 test("Testing that getHigherResTwitterImage() returns null when the argument doesn't exist", () => {
-	expect(getHigherResTwitterImage("")).toBeNull();
+	expect(getHigherResTwitterImage(undefined)).toBeNull();
 });
 
 test("Testing getHigherResTwitterImage() removes the '_normal' part of the image URL.", () => {
