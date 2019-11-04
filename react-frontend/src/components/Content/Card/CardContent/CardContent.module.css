@@ -1,0 +1,38 @@
+h2 {
+	font-size: 1rem;
+	padding: 0;
+	margin: 0.25rem 0rem;
+}
+
+h3 {
+	font-size: 0.75rem;
+	padding: 0;
+	margin: 0.25rem 0rem;
+}
+
+.card-content__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: flex-start;
+	height: 10rem;
+	background-color: #edf2f7;
+	width: 70vw;
+	padding: 0rem 1.5rem;
+}
+
+.card-content__story {
+	font-size: 0.75rem;
+	font-style: italic;
+	padding: 0;
+	margin: 0.25rem 0rem;
+}
+
+.card-content__date {
+	font-size: 0.5rem;
+	color: #8c9aad;
+	padding: 0;
+	margin: 0.25rem 0rem;
+	text-align: right;
+	font-style: italic;
+}

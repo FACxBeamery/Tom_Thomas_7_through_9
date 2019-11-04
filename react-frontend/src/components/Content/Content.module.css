@@ -1,0 +1,19 @@
+.no-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	font-style: italic;
+	color: #8c9aad;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	min-height: calc(100vh - 6rem);
+}
+
+.content {
+	/* display: flex;
+	flex-direction: column;
+	align-content: center; */
+	min-height: calc(100vh - 6rem);
+}

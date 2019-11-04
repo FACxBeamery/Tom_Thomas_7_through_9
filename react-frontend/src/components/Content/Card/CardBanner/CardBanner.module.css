@@ -1,0 +1,19 @@
+.news {
+	background-color: #efb530;
+}
+
+.twitter {
+	background-color: #00acee;
+}
+
+.banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 2rem;
+}
+
+.icon {
+	width: 1.25rem;
+	padding: 0.25rem;
+}

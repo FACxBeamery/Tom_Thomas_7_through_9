@@ -1,0 +1,21 @@
+.image {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 10rem;
+	background-color: #edf2f7;
+	width: 21.3vw;
+}
+
+.card__image {
+	object-fit: cover;
+	height: 4rem;
+	width: 4rem;
+	margin: 0.5rem;
+	border-radius: 50%;
+}
+
+.icon {
+	width: 1.25rem;
+	padding: 0.5rem;
+}

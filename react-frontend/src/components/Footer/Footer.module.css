@@ -1,0 +1,16 @@
+.footer {
+	display: flex;
+	align-items: center;
+	background-color: #334256;
+	height: 2rem;
+	width: 100%;
+	position: relative;
+	z-index: 10;
+}
+
+.footer__text {
+	font-style: italic;
+	color: #fafcff;
+	margin: 0 auto;
+	padding: 0;
+}
