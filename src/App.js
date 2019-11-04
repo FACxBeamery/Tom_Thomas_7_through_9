@@ -8,6 +8,7 @@ function App() {
 	const [contentChoice, setContentChoice] = React.useState("most-recent");
 	const [tweetsSelected, setTweetsSelected] = React.useState(true);
 	const [newsSelected, setNewsSelected] = React.useState(true);
+	const [favouritesObj, setFavouritesObj] = React.useState({});
 
 	return (
 		<div className="App">
@@ -18,11 +19,15 @@ function App() {
 				setTweetsSelected={setTweetsSelected}
 				newsSelected={newsSelected}
 				setNewsSelected={setNewsSelected}
+				favouritesObj={favouritesObj}
+				setFavouritesObj={setFavouritesObj}
 			/>
 			<Content
 				contentChoice={contentChoice}
 				tweetsSelected={tweetsSelected}
 				newsSelected={newsSelected}
+				favouritesObj={favouritesObj}
+				setFavouritesObj={setFavouritesObj}
 			/>
 			<Footer />
 		</div>

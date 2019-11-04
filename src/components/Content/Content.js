@@ -5,7 +5,14 @@ import mockNews from "./mockNews.js";
 import styles from "./Content.module.css";
 // import twitterClient from "./twitterConfig.js";
 
-const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
+const Content = ({
+	contentChoice,
+	tweetsSelected,
+	newsSelected,
+	favouritesObj,
+	setFavouritesObj
+}) => {
+	// const [favouritesObj, setFavourtiesObj] = React.useState({});
 	// const [newsArticles, setNewsArticles] = React.useState(null);
 
 	// const twitterSearchParams = {
@@ -116,6 +123,8 @@ const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
 						<Card
 							key={Date.parse(element.dateStandard)}
 							cardData={element}
+							favouritesObj={favouritesObj}
+							setFavouritesObj={setFavouritesObj}
 						/>
 					);
 			  })

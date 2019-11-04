@@ -12,9 +12,9 @@ const getHigherResTwitterImage = (imageURL) => {
 	}
 };
 
-const Card = ({ cardData }) => {
-	const [favourite, setFavourite] = React.useState(false);
-	cardData.favourite = favourite;
+const Card = ({ cardData, key, favouritesObj, setFavouritesObj }) => {
+	// const [favourite, setFavourite] = React.useState(false);
+	// cardData.favourite = favourite;
 	return cardData.mediaType === "tweet" ? (
 		<article className={styles.cardContainer}>
 			<CardImage
@@ -30,10 +30,11 @@ const Card = ({ cardData }) => {
 				cardPublicationDate={cardData.dateStandard}
 			/>
 			<CardBanner
+				key={key}
 				mediaType={cardData.mediaType}
 				// cardSourceURL={cardData.entities.urls[0].expanded_url}
-				favourite={cardData.favourite}
-				setFavourite={setFavourite}
+				favouritesObj={favouritesObj}
+				setFavouritesObj={setFavouritesObj}
 			/>
 		</article>
 	) : (
@@ -48,8 +49,8 @@ const Card = ({ cardData }) => {
 			<CardBanner
 				mediaType={cardData.mediaType}
 				cardSourceURL={cardData.url}
-				favourite={cardData.favourite}
-				setFavourite={setFavourite}
+				favouritesObj={favouritesObj}
+				setFavouritesObj={setFavouritesObj}
 			/>
 		</article>
 	);
