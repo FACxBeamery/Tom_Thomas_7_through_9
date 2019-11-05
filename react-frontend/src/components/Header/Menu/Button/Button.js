@@ -8,7 +8,7 @@ const Button = ({ onClick, highlighted, buttonText }) => {
 				highlighted === true
 					? buttonStyles["menu-button"] +
 					  " " +
-					  buttonStyles["highlighted-button"]
+					  buttonStyles["menu-button--highlighted"]
 					: buttonStyles["menu-button"]
 			}
 			onClick={onClick}
