@@ -1,6 +1,6 @@
 import React from "react";
 import CardImage from "./CardImage/CardImage.js";
-import CardContent from "./CardContent/CardContent.js";
+import { CardContent } from "./CardContent/CardContent.js";
 import CardBanner from "./CardBanner/CardBanner.js";
 import styles from "./Card.module.css";
 
@@ -13,6 +13,8 @@ const getHigherResTwitterImage = (imageURL) => {
 };
 
 const Card = ({ cardData }) => {
+	const [favourite, setFavourite] = React.useState(false);
+	cardData.favourite = favourite;
 	return cardData.mediaType === "tweet" ? (
 		<article className={styles.cardContainer}>
 			<CardImage
@@ -30,6 +32,8 @@ const Card = ({ cardData }) => {
 			<CardBanner
 				mediaType={cardData.mediaType}
 				// cardSourceURL={cardData.entities.urls[0].expanded_url}
+				favourite={cardData.favourite}
+				setFavourite={setFavourite}
 			/>
 		</article>
 	) : (
@@ -44,9 +48,11 @@ const Card = ({ cardData }) => {
 			<CardBanner
 				mediaType={cardData.mediaType}
 				cardSourceURL={cardData.url}
+				favourite={cardData.favourite}
+				setFavourite={setFavourite}
 			/>
 		</article>
 	);
 };
 
-export default Card;
+export { Card, getHigherResTwitterImage };

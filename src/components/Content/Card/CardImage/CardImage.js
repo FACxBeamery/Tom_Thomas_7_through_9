@@ -17,6 +17,7 @@ const CardImage = ({ imageURL, mediaType }) => {
 				src={mediaType === "tweet" ? twitterIconPath : newsIconPath}
 				className={styles.icon}
 				data-testid="twitter-icon"
+				alt="twitter icon"
 			/>
 		</div>
 	);
