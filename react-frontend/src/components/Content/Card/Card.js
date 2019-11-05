@@ -7,9 +7,8 @@ import styles from "./Card.module.css";
 const getHigherResTwitterImage = (imageURL) => {
 	if (imageURL) {
 		return imageURL.replace("_normal", "");
-	} else {
-		return null;
 	}
+	return null;
 };
 
 const Card = ({ cardData }) => {

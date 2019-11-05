@@ -7,9 +7,9 @@ const truncateString = (stringToTruncate, chosenLength) => {
 			return `${stringToTruncate.substring(0, chosenLength)}...`;
 		}
 		return stringToTruncate;
+	} else {
+		return null;
 	}
-
-	return null;
 };
 
 const CardContent = ({
