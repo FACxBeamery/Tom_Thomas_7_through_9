@@ -1,4 +1,4 @@
-.headerContainer {
+.header-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -14,7 +14,7 @@
 	margin: 0 auto;
 }
 
-.burgerContainer {
+.burger-container {
 	display: inline-block;
 	cursor: pointer;
 	padding: 1rem;

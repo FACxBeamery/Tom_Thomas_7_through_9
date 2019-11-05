@@ -6,10 +6,10 @@ const Button = ({ onClick, highlighted, buttonText }) => {
 		<button
 			className={
 				highlighted === true
-					? buttonStyles.menuButton +
+					? buttonStyles["menu-button"] +
 					  " " +
-					  buttonStyles.highlightedButton
-					: buttonStyles.menuButton
+					  buttonStyles["menu-button--highlighted"]
+					: buttonStyles["menu-button"]
 			}
 			onClick={onClick}
 		>

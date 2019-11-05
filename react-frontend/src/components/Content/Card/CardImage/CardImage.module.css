@@ -1,4 +1,4 @@
-.imageContainer {
+.image {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -7,7 +7,7 @@
 	width: 21.3vw;
 }
 
-.cardImage {
+.card__image {
 	object-fit: cover;
 	height: 4rem;
 	width: 4rem;

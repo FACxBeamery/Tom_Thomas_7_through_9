@@ -10,7 +10,7 @@ h3 {
 	margin: 0.25rem 0rem;
 }
 
-.cardContentContainer {
+.card-content__container {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -18,18 +18,17 @@ h3 {
 	height: 10rem;
 	background-color: #edf2f7;
 	width: 70vw;
-	/* margin: auto; */
 	padding: 0rem 1.5rem;
 }
 
-.cardStory {
+.card-content__story {
 	font-size: 0.75rem;
 	font-style: italic;
 	padding: 0;
 	margin: 0.25rem 0rem;
 }
 
-.cardDate {
+.card-content__date {
 	font-size: 0.5rem;
 	color: #8c9aad;
 	padding: 0;

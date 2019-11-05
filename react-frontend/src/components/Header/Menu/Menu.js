@@ -10,8 +10,8 @@ const Menu = ({
 	setNewsSelected
 }) => {
 	return (
-		<div className={styles.menuContainer}>
-			<div className={styles.tabContainer}>
+		<div className={styles["menu-container"]}>
+			<div className={styles["tab-container"]}>
 				<Button
 					onClick={() => setContentChoice("most-recent")}
 					highlighted={contentChoice === "most-recent"}
@@ -23,7 +23,7 @@ const Menu = ({
 					buttonText="Favourites"
 				/>
 			</div>
-			<div className={styles.filterContainer}>
+			<div className={styles["filter-container"]}>
 				<Button
 					onClick={() =>
 						setTweetsSelected((tweetsSelected) => !tweetsSelected)

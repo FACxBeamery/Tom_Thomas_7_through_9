@@ -1,4 +1,8 @@
 .no-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
 	font-style: italic;
 	color: #8c9aad;
 	margin: 0 auto;
@@ -7,7 +11,7 @@
 	min-height: calc(100vh - 6rem);
 }
 
-.contentContainer {
+.content {
 	/* display: flex;
 	flex-direction: column;
 	align-content: center; */

@@ -4,8 +4,8 @@ import styles from "./Footer.module.css";
 const Footer = () => {
 	return (
 		<>
-			<div className={styles.footerContainer}>
-				<p className={styles.footerText}>
+			<div className={styles["footer"]}>
+				<p className={styles["footer__text"]}>
 					Brought to you by the Beamery Graduate Team
 				</p>
 			</div>

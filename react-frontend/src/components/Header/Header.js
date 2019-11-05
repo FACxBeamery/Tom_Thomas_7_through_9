@@ -17,25 +17,31 @@ const Header = ({
 
 	return (
 		<>
-			<div className={styles.headerContainer}>
+			<div className={styles["header-container"]}>
 				<img
-					className={styles.logo}
+					className={styles["logo"]}
 					src={imagePath}
 					alt="Beamery Social Logo"
 				/>
 				<div
-					className={styles.burgerContainer}
+					className={styles["burger-container"]}
 					onClick={handleClick}
 					data-testid="burger"
 				>
 					<div
-						className={menuSelected ? styles.change1 : styles.bar1}
+						className={
+							menuSelected ? styles["change1"] : styles["bar1"]
+						}
 					></div>
 					<div
-						className={menuSelected ? styles.change2 : styles.bar2}
+						className={
+							menuSelected ? styles["change2"] : styles["bar2"]
+						}
 					></div>
 					<div
-						className={menuSelected ? styles.change3 : styles.bar3}
+						className={
+							menuSelected ? styles["change3"] : styles["bar3"]
+						}
 					></div>
 				</div>
 			</div>
