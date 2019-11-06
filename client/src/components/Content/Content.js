@@ -1,11 +1,10 @@
 import React from "react";
 import { Card } from "./Card/Card";
-import mockTweet from "./mockTweet.js";
-import mockNews from "./mockNews.js";
+
 import styles from "./Content.module.css";
 // import twitterClient from "./twitterConfig.js";
 
-const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
+const Content = ({ contentChoice, tweetsSelected, newsSelected, data }) => {
 	// const [newsArticles, setNewsArticles] = React.useState(null);
 
 	// const twitterSearchParams = {
@@ -68,6 +67,8 @@ const Content = ({ contentChoice, tweetsSelected, newsSelected }) => {
 	// React.useEffect(() => {
 	// 	getGoogleNews();
 	// }, []);
+	// console.log(data);
+	const [mockNews, mockTweet] = data;
 
 	mockNews.articles.forEach((elem) => {
 		elem.mediaType = "news";
