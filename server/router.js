@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express();
+const getMedia = require("./queries/getMedia");
+const googleNewsApi = require("./utils/googleAPI.js");
+const twitterApi = require("./utils/twitterAPI.js");
 
-// import handlers here...
 let lastReqTime;
 
 router.get("/media", () => mediaHandler(lastReqTime));
@@ -19,12 +21,10 @@ const mediaHandler = (lastReqTime) => {
         populateDBQuery([cleanTweets, news]);
 
     }
-    return getDBQuery(); // send this to front end
+    return getMedia; // send this to front end
 };
 
-const APITwitter = () => {
-    // get response from twitter, clean up and return array of tweets
-};
+
 
 const populateDBQuery = (media) => {
     // check each unique ID in media against IDs currently in DB. Do not 
