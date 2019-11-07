@@ -1,12 +1,16 @@
 const express = require("express");
 const router = express();
 const getDB = require("./databaseConnection.js").getDB;
+
 const {
 	googleNewsApi,
 	cleanGoogleNewsApiResponse
 } = require("./utils/googleAPI.js");
 
-// import handlers here...
+const getMedia = require("./queries/getMedia");
+const twitterApi = require("./utils/twitterAPI.js");
+
+
 let lastReqTime;
 
 router.get("/media", () => mediaHandler(lastReqTime));
@@ -36,8 +40,9 @@ const mediaHandler = (lastReqTime) => {
 
 		// populateDBQuery([cleanTweets, news]);
 	}
-	return getDBQuery(); // send this to front end
+    return getMedia; // send this to front end
 };
+
 
 const favouriteHandler = () => {
 	const idOfDocToChange = req.params.id;
@@ -73,6 +78,7 @@ const getUpdatedDoc = (database, idOfDocToFind, callback) => {
 const APITwitter = () => {
 	// get response from twitter, clean up and return array of tweets
 };
+
 
 const populateDBQuery = (media) => {
 	// check each unique ID in media against IDs currently in DB. Do not
