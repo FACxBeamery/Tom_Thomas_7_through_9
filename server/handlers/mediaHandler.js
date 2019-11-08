@@ -9,7 +9,6 @@ const { initDB, getDB, closeDB } = require("../databaseConnection.js");
 
 const mediaHandler = (req, res) => {
 	const db = getDB();
-	// return res.status(200).send("reached media handler");
 	makeApiCalls(req, res, db);
 };
 

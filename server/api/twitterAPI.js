@@ -11,24 +11,10 @@ const twitterApi = (mostRecentTweetId) => {
 		since_id: mostRecentTweetId
 	};
 
-	// twitterClient.get(
-	//     "search/tweets",
-	//     twitterSearchParams,
-	//     (error, tweetsReceived, response) => {
-	//         if (!error) {
-	//             tweets = tweetsReceived;
-	//         } else {
-	//             console.error(error);
-	//         }
-	//         return tweets;
-	//     }
-	// );
-
 	return twitterClient.get("search/tweets", twitterSearchParams);
 };
 
 const cleanTwitterApiResponse = (twitterApiResponse) => {
-	// console.log(twitterApiResponse);
 	const cleanedTwitterApiResponse = twitterApiResponse.statuses.map(
 		(element) => {
 			const cleanedTweet = {};
@@ -38,6 +24,7 @@ const cleanTwitterApiResponse = (twitterApiResponse) => {
 			cleanedTweet.publicationDate = new Date(
 				element.created_at
 			).toUTCString();
+			cleanedTweet.dateStandard = new Date(element.created_at);
 			cleanedTweet.mediaType = "tweet";
 			cleanedTweet.favourite = false;
 			cleanedTweet.imageUrl = element.user.profile_image_url_https;

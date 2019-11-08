@@ -14,41 +14,28 @@ const getHigherResTwitterImage = (imageURL) => {
 const Card = ({ cardData }) => {
 	const [favourite, setFavourite] = React.useState(false);
 	cardData.favourite = favourite;
-	return cardData.mediaType === "tweet" ? (
+	return (
 		<article className={styles["card"]}>
 			<CardImage
-				imageURL={getHigherResTwitterImage(
-					cardData.user.profile_image_url_https
-				)}
-				mediaType="tweet"
-			/>
-			<CardContent
-				cardTitle={cardData.user.name}
-				cardHeading={"@" + cardData.user.screen_name}
-				cardMainText={cardData.text}
-				cardPublicationDate={cardData.dateStandard}
-			/>
-			<CardBanner
+				imageURL={
+					cardData.mediaType === "tweet"
+						? getHigherResTwitterImage(cardData.imageUrl)
+						: cardData.imageUrl
+				}
 				mediaType={cardData.mediaType}
-				// cardSourceURL={cardData.entities.urls[0].expanded_url}
-				favourite={cardData.favourite}
-				setFavourite={setFavourite}
 			/>
-		</article>
-	) : (
-		<article className={styles["card"]}>
-			<CardImage imageURL={cardData.urlToImage} mediaType="news" />
 			<CardContent
 				cardTitle={cardData.title}
-				cardHeading={cardData.source.name}
-				cardMainText={cardData.description}
-				cardPublicationDate={cardData.dateStandard}
+				cardHeading={cardData.heading}
+				cardMainText={cardData.mainText}
+				cardPublicationDate={cardData.publicationDate}
 			/>
 			<CardBanner
 				mediaType={cardData.mediaType}
-				cardSourceURL={cardData.url}
+				cardSourceURL={cardData.sourceUrl}
 				favourite={cardData.favourite}
 				setFavourite={setFavourite}
+				_id={cardData._id}
 			/>
 		</article>
 	);

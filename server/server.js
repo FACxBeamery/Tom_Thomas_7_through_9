@@ -6,7 +6,7 @@ const bodyParser = require("./middleware/bodyParser.js");
 
 const app = express();
 
-// app.use(bodyParser);
+app.patch(bodyParser);
 
 app.use(router);
 
