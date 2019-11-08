@@ -35,7 +35,7 @@ const Card = ({ cardData }) => {
 				cardSourceURL={cardData.sourceUrl}
 				favourite={cardData.favourite}
 				setFavourite={setFavourite}
-				_id={cardData._id}
+				id={cardData._id}
 			/>
 		</article>
 	);

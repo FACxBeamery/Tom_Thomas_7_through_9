@@ -3,9 +3,24 @@ import styles from "./CardBanner.module.css";
 import linkIconPath from "./link.svg";
 import fullHeartPath from "./full_heart.svg";
 import emptyHeartPath from "./empty_heart.svg";
+import axios from "axios";
 
-const CardBanner = ({ mediaType, cardSourceURL, favourite, setFavourite }) => {
-	// const [favourite, setFavourite] = React.useState(false);
+const CardBanner = ({
+	mediaType,
+	cardSourceURL,
+	favourite,
+	setFavourite,
+	id
+}) => {
+	const [heartFull, setHeartFull] = React.useState(false);
+	const handleClick = async (heartFull) => {
+		const res = await axios.patch(`/media/${id}`, {
+			favourite: !heartFull
+		});
+		if (res.status === 200) {
+			setHeartFull((heartFull) => !heartFull);
+		} // add error handling here
+	};
 	return (
 		<div
 			className={
@@ -15,13 +30,11 @@ const CardBanner = ({ mediaType, cardSourceURL, favourite, setFavourite }) => {
 			}
 		>
 			<img
-				src={favourite ? fullHeartPath : emptyHeartPath}
+				src={heartFull ? fullHeartPath : emptyHeartPath}
 				className={styles.icon}
 				data-testid="heart-icon"
 				alt="a heart icon"
-				onClick={() => {
-					setFavourite((favourite) => !favourite);
-				}}
+				onClick={handleClick}
 			/>
 			<a href={cardSourceURL}>
 				<img
