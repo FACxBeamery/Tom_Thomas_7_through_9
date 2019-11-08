@@ -61,6 +61,12 @@ services:
     ##########################
     db:
         image: mongo
+<<<<<<< HEAD
         # ports:
         #   - 27017:27017
         restart: always
+=======
+        ports:
+          - 27017:27017
+        restart: always
+>>>>>>> 0a821aa740b90bc472d60484f942a7b1349aa19e
