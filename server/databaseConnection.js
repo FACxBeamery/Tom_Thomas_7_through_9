@@ -1,4 +1,5 @@
-const mongoUri = process.env.MONGO_URI || "mongo://localhost:27017/db";
+const mongoUri =
+	process.env.MONGO_URI || "mongodb://localhost:27017/beamerySocial";
 const mongoClient = require("mongodb").MongoClient;
 const assert = require("assert");
 
@@ -19,9 +20,9 @@ const initDB = () => {
 				console.log("Initialising DB!");
 				_client = client;
 				_db = client.db("beamerySocial");
-				// db.collection("media").insertOne({
-				// 	message: "Initialise DB."
-				// });
+				_db.collection("media").insertOne({
+					message: "Initialise DB."
+				});
 				resolve(_db);
 			}
 		};
