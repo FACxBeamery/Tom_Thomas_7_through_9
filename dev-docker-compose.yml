@@ -22,8 +22,8 @@ services:
             - MORGAN=combined
             - NODE_ENV=development
         # Port mapping
-        # ports:
-        #   - 4000:4000
+        ports:
+          - 4000:4000
         # Volumes to mount
         volumes:
             - ./server:/app/server
@@ -61,6 +61,6 @@ services:
     ##########################
     db:
         image: mongo
-        # ports:
-        #   - 27017:27017
+        ports:
+          - 27017:27017
         restart: always

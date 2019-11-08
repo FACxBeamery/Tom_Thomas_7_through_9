@@ -16,6 +16,7 @@ COPY package*.json /app/server/
 # Install dependencies
 RUN npm install
 RUN npm install express
+RUN npm install twitter
 
 # Copy the server files over
 COPY . /app/server/
