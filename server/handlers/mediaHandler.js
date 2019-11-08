@@ -6,15 +6,16 @@ const addToDbQuery = require("../queries/addToDbQuery.js");
 const getMedia = require("../queries/getMedia");
 const { twitterApi, cleanTwitterApiResponse } = require("../api/twitterAPI.js");
 
-const mediaHandler = (lastReqTime) => {
-	if (Date.now() - lastReqTime > 60000) {
+const mediaHandler = () => {
+	console.log("inside media handler");
+	if (true) {
 		// 1 minute
 		// const twitterApiResponse = twitterApi();
 		// const cleanTweets = cleanTwitterApiResponse(twitterApiResponse);
 		// addToDbQuery(cleanTweets);
 
 		addGoogleNewsToDb();
-		addTwitterToDb();
+		// addTwitterToDb();
 	}
 	return getMedia; // send this to front end
 };

@@ -2,25 +2,31 @@ import React from "react";
 import mockNews from "./mockNews";
 import mockTweet from "./mockTweet";
 import AppChild from "./AppChild";
-
+import axios from "axios";
 const data = [mockNews, mockTweet];
 
 const App = () => {
-	let data;
+	console.log("inside app");
+	// let data;
+	console.log("after data is declared");
+	const [dataState, setDataState] = React.useState({});
 	React.useEffect(() => {
+		console.log("just inside useEffect");
 		async function getMessage() {
 			try {
-				const response = await fetch("/media");
+				console.log("inside the try catch of useEffect.");
+				const response = await axios.get("/media");
 				console.log("response :", response);
+				setDataState(response.data);
 				data = response.data;
 			} catch (err) {
 				console.log("Error inside useEffect.");
 				console.log(err);
 			}
 		}
+		console.log("dataState:", dataState);
 		getMessage();
 	}, []);
-	console.log("data:", data);
 	return <AppChild data={data} />;
 };
 

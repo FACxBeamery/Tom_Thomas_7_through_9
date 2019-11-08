@@ -5,8 +5,7 @@ const mediaHandler = require("./handlers/mediaHandler");
 const favouriteHandler = require("./handlers/favouriteHandler.js");
 
 const lastReqTime = 0;
-router.get("/media", () => mediaHandler(lastReqTime));
-
+router.get("/media", mediaHandler);
 router.patch("/media/:id", favouriteHandler);
 
 module.exports = router;

@@ -15,7 +15,6 @@ COPY package*.json /app/server/
 
 # Install dependencies
 RUN npm install
-RUN npm install express
 
 # Copy the server files over
 COPY . /app/server/
