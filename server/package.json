@@ -8,13 +8,15 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "nodemon server.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "NODE_ENV=test tape testDatabase.js | tap-spec"
 	},
 	"dependencies": {
 		"assert": "^2.0.0",
 		"express": "^4.17.1",
 		"mongodb": "^3.3.3",
 		"node-fetch": "^2.6.0",
+		"tap-spec": "^5.0.0",
+		"tape": "^4.11.0",
 		"twitter": "^1.7.1"
 	}
 }
